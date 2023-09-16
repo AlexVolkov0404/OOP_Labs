@@ -1,0 +1,3 @@
+Ribbon,2.99
+Vase,7.50
+Greeting Card,1.25

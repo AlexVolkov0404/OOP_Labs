@@ -1,4 +1,7 @@
 package colors;
 
-public class RedColor {
+public class RedColor extends Color {
+    public RedColor() {
+        super("Red");
+    }
 }

@@ -1,8 +1,10 @@
 package flowers;
 
+import colors.Color;
+
 public class Tulip extends Flower{
     private boolean isSpringBloomer;
-    public Tulip(String name, String color, double price, int freshnessLevel, int stemLength,boolean isSpringBloomer) {
+    public Tulip(String name, Color color, double price, int freshnessLevel, int stemLength, boolean isSpringBloomer) {
         super(name, color, price, freshnessLevel, stemLength);
         this.isSpringBloomer = isSpringBloomer;
     }

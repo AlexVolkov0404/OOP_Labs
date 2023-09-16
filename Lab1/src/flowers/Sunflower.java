@@ -1,8 +1,10 @@
 package flowers;
 
+import colors.Color;
+
 public class Sunflower extends Flower{
     private double seedSizeInInches;
-    public Sunflower(String name, String color, double price, int freshnessLevel, int stemLength,double seedSizeInInches) {
+    public Sunflower(String name, Color color, double price, int freshnessLevel, int stemLength, double seedSizeInInches) {
         super(name, color, price, freshnessLevel, stemLength);
         this.seedSizeInInches = seedSizeInInches;
     }

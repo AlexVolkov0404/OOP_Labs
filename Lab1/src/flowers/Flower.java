@@ -1,13 +1,14 @@
 package flowers;
+import colors.Color;
 
-public  class Flower {
+public class Flower {
     private String name;
-    private String color;
+    private Color color;
     private double price;
     private int freshnessLevel;
     private int stemLength;
 
-    public Flower(String name, String color, double price, int freshnessLevel, int stemLength) {
+    public Flower(String name, Color color, double price, int freshnessLevel, int stemLength) {
         this.name = name;
         this.color = color;
         this.price = price;
@@ -19,7 +20,7 @@ public  class Flower {
         return name;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
@@ -34,12 +35,12 @@ public  class Flower {
     public int getStemLength() {
         return stemLength;
     }
+
     // Method to describe the flower
     public void describe() {
         System.out.println("Name: " + name);
-        System.out.println("Color: " + color);
+        System.out.println("Color: " + color.getName());
         System.out.println("Height (in inches): " + stemLength);
         System.out.println("Fragrance: " + freshnessLevel);
     }
-
 }
