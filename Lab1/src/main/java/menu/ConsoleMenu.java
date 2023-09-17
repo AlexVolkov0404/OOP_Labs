@@ -1,4 +1,5 @@
 package menu;
+
 import bouquet.Accessory;
 import bouquet.FlowerBouquet;
 import flowers.Flower;
@@ -10,6 +11,7 @@ import utils.FlowerSorter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 public class ConsoleMenu {
     private Scanner scanner = new Scanner(System.in);
     private List<FlowerBouquet> allBouquets = new ArrayList<>();
@@ -17,20 +19,21 @@ public class ConsoleMenu {
     private List<Flower> allFlowers;
 
     public ConsoleMenu() {
-        String accessoriesFile = "D:\\Common\\University\\3курс\\OOP\\OOP_Labs\\Lab1\\src\\accessories.txt";
+        String accessoriesFile = "src/main/resources/accessories.txt";
         accessories = AccessoryDataReader.readAccessoriesFromFile(accessoriesFile);
 
-        String orchidsFile = "D:\\Common\\University\\3курс\\OOP\\OOP_Labs\\Lab1\\src\\orchids.txt";
+        String orchidsFile = "src/main/resources/orchids.txt";
         List<Flower> orchids = FlowerDataReader.readFlowersFromFile(orchidsFile);
 
-        String rosesFile = "D:\\Common\\University\\3курс\\OOP\\OOP_Labs\\Lab1\\src\\roses.txt";
+        String rosesFile = "src/main/resources/roses.txt";
         List<Flower> roses = FlowerDataReader.readFlowersFromFile(rosesFile);
 
         allFlowers = new ArrayList<>();
         allFlowers.addAll(orchids);
         allFlowers.addAll(roses);
     }
-    public  void displayMenu() {
+
+    public void displayMenu() {
         System.out.println("Меню:");
         System.out.println("1. Вивести доступні квіти");
         System.out.println("2. Вивести доступні аксесуари");
@@ -46,7 +49,7 @@ public class ConsoleMenu {
         while (!exit) {
             displayMenu();
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Очищаємо буфер після введення числа
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -134,6 +137,7 @@ public class ConsoleMenu {
         System.out.println("Букет створено!");
         return bouquet;
     }
+
     public void showAllBouquetsWithNumbers() {
         if (allBouquets.isEmpty()) {
             System.out.println("У вас ще немає створених букетів.");
@@ -145,6 +149,7 @@ public class ConsoleMenu {
             }
         }
     }
+
     public void sortFlowersInBouquet() {
         showAllBouquetsWithNumbers();
         if (allBouquets.isEmpty()) {
@@ -165,6 +170,7 @@ public class ConsoleMenu {
         System.out.println("Букет був відсортований за рівнем свіжості.");
         selectedBouquet.describe();
     }
+
     public void findFlowersByStemLength() {
         showAllBouquetsWithNumbers();
 
