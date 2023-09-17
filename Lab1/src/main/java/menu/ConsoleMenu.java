@@ -85,7 +85,9 @@ public class ConsoleMenu {
         System.out.println("Доступні квіти:");
         for (int i = 0; i < allFlowers.size(); i++) {
             Flower flower = allFlowers.get(i);
-            System.out.println((i + 1) + ". " + flower.getName() + " - " + flower.getColor().getName() + " - " + flower.getStemLength() + " inches - Freshness: " + flower.getFreshnessLevel());
+            //System.out.println((i + 1) + ". " + flower.getName() + " - " + flower.getColor().getName() + " - " + flower.getStemLength() + " inches - Freshness: " + flower.getFreshnessLevel());
+            System.out.print((i + 1) + ". Flower");
+            flower.describe();
         }
     }
 

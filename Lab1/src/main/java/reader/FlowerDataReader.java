@@ -26,7 +26,7 @@ public class FlowerDataReader {
 
                     Color color = getColorObject(colorClassName);
 
-                    Flower flower = createFlower(name, color, price, freshnessLevel, stemLength, parts);
+                    Flower flower = createFlower(filename,name, color, price, freshnessLevel, stemLength, parts);
                     if (flower != null) {
                         flowers.add(flower);
                     }
@@ -49,20 +49,31 @@ public class FlowerDataReader {
         }
     }
 
-    private static Flower createFlower(String name, Color color, double price, int freshnessLevel, int stemLength, String[] parts) {
-        if (parts.length > 5) {
-            String species = parts[5];
-            return new Orchid(name, color, price, freshnessLevel, stemLength, species);
-        } else if (parts.length > 6) {
-            int numberOfPetals = Integer.parseInt(parts[6]);
-            return new Rose(name, color, price, freshnessLevel, stemLength, numberOfPetals);
-        } else if (parts.length > 7) {
-            double seedSizeInInches = Double.parseDouble(parts[7]);
-            return new Sunflower(name, color, price, freshnessLevel, stemLength, seedSizeInInches);
-        } else if (parts.length > 8) {
-            boolean isSpringBloomer = Boolean.parseBoolean(parts[8]);
-            return new Tulip(name, color, price, freshnessLevel, stemLength, isSpringBloomer);
+    private static Flower createFlower(String type,String name, Color color, double price, int freshnessLevel, int stemLength, String[] parts) {
+
+        switch (type) {
+            case "src/main/resources/orchids.txt":
+                String species = parts[5];
+                return new Orchid(name, color, price, freshnessLevel, stemLength, species);
+            case "src/main/resources/roses.txt":
+                int numberOfPetals = Integer.parseInt(parts[5]);
+                return new Rose(name, color, price, freshnessLevel, stemLength, numberOfPetals);
+//            case "Sunflower":
+//                if (parts.length > 8) {
+//                    double seedSizeInInches = Double.parseDouble(parts[8]);
+//                    return new Sunflower(name, color, price, freshnessLevel, stemLength, seedSizeInInches);
+//                }
+//                break;
+//            case "Tulip":
+//                if (parts.length > 9) {
+//                    boolean isSpringBloomer = Boolean.parseBoolean(parts[9]);
+//                    return new Tulip(name, color, price, freshnessLevel, stemLength, isSpringBloomer);
+//                }
+//                break;
+//            default:
+//                break;
         }
+
         return null;
     }
 }
