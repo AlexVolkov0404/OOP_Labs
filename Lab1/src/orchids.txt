@@ -1,2 +1,3 @@
-Orchid1,colors.RedColor,19.99,4,14,Dendrobium
+Orchid1,colors.RedColor,19.99,4,9,Dendrobium
 Orchid2,colors.WhiteColor,24.99,5,16,Phalaenopsis
+Orchid3,colors.WhiteColor,24.99,1,16,Phalaenopsis

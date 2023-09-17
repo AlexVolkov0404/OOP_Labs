@@ -26,6 +26,9 @@ public class FlowerBouquet {
         return flowerPrice + accessoryPrice;
     }
 
+    public List<Flower> getFlowers() {
+        return flowers;
+    }
     public void describe() {
         System.out.println("Bouquet Contents:");
         for (Flower flower : flowers) {
