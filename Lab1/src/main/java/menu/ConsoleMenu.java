@@ -28,9 +28,17 @@ public class ConsoleMenu {
         String rosesFile = "src/main/resources/roses.txt";
         List<Flower> roses = FlowerDataReader.readFlowersFromFile(rosesFile);
 
+        String sunflowerFile = "src/main/resources/sunflower.txt";
+        List<Flower> sunflower = FlowerDataReader.readFlowersFromFile(sunflowerFile);
+
+        String tulipFile = "src/main/resources/tulip.txt";
+        List<Flower> tulip = FlowerDataReader.readFlowersFromFile(tulipFile);
+
         allFlowers = new ArrayList<>();
         allFlowers.addAll(orchids);
         allFlowers.addAll(roses);
+        allFlowers.addAll(sunflower);
+        allFlowers.addAll(tulip);
     }
 
     public void displayMenu() {
@@ -198,10 +206,10 @@ public class ConsoleMenu {
             System.out.print("Введіть мінімальну довжину стебла: ");
             if (scanner.hasNextInt()) {
                 minStemLength = scanner.nextInt();
-                break; // Введено коректне значення, виходимо з циклу
+                break;
             } else {
                 System.out.println("Помилка! Введіть ціле число для мінімальної довжини стебла.");
-                scanner.next(); // Очищаємо буфер введення
+                scanner.next();
             }
         }
 
@@ -210,13 +218,13 @@ public class ConsoleMenu {
             if (scanner.hasNextInt()) {
                 maxStemLength = scanner.nextInt();
                 if (maxStemLength >= minStemLength) {
-                    break; // Введено коректне значення, виходимо з циклу
+                    break;
                 } else {
                     System.out.println("Помилка! Максимальна довжина стебла повинна бути більшою або рівною мінімальній.");
                 }
             } else {
                 System.out.println("Помилка! Введіть ціле число для максимальної довжини стебла.");
-                scanner.next(); // Очищаємо буфер введення
+                scanner.next();
             }
         }
 

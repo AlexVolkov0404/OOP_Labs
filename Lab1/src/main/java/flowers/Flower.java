@@ -38,9 +38,9 @@ public class Flower {
 
     // Method to describe the flower
     public void describe() {
-        System.out.println("Name: " + name);
-        System.out.println("Color: " + color.getName());
-        System.out.println("Height (in inches): " + stemLength);
-        System.out.println("Fragrance: " + freshnessLevel);
+        System.out.print("Name: " + name + " ");
+        System.out.print("Color: " + color.getName() + " ");
+        System.out.print("Height (in inches): " + stemLength + " ");
+        System.out.print("Fragrance: " + freshnessLevel + " ");
     }
 }

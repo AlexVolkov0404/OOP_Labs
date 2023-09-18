@@ -26,7 +26,7 @@ public class FlowerDataReader {
 
                     Color color = getColorObject(colorClassName);
 
-                    Flower flower = createFlower(filename,name, color, price, freshnessLevel, stemLength, parts);
+                    Flower flower = createFlower(filename, name, color, price, freshnessLevel, stemLength, parts);
                     if (flower != null) {
                         flowers.add(flower);
                     }
@@ -49,7 +49,7 @@ public class FlowerDataReader {
         }
     }
 
-    private static Flower createFlower(String type,String name, Color color, double price, int freshnessLevel, int stemLength, String[] parts) {
+    private static Flower createFlower(String type, String name, Color color, double price, int freshnessLevel, int stemLength, String[] parts) {
 
         switch (type) {
             case "src/main/resources/orchids.txt":
@@ -58,12 +58,14 @@ public class FlowerDataReader {
             case "src/main/resources/roses.txt":
                 int numberOfPetals = Integer.parseInt(parts[5]);
                 return new Rose(name, color, price, freshnessLevel, stemLength, numberOfPetals);
-//            case "Sunflower":
-//                if (parts.length > 8) {
-//                    double seedSizeInInches = Double.parseDouble(parts[8]);
-//                    return new Sunflower(name, color, price, freshnessLevel, stemLength, seedSizeInInches);
-//                }
-//                break;
+            case "src/main/resources/sunflower.txt":
+                int seedSizeInInches = Integer.parseInt(parts[5]);
+                return new Sunflower(name, color, price, freshnessLevel, stemLength, seedSizeInInches);
+            case "src/main/resources/tulip.txt":
+                int intValue = Integer.parseInt(parts[5]);
+                boolean isSpringBloomer = intValue != 0;
+                return new Tulip(name, color, price, freshnessLevel, stemLength, isSpringBloomer);
+
 //            case "Tulip":
 //                if (parts.length > 9) {
 //                    boolean isSpringBloomer = Boolean.parseBoolean(parts[9]);

@@ -1,8 +1,10 @@
 package bouquet;
+
 import flowers.Flower;
 
 import java.util.ArrayList;
 import java.util.List;
+
 public class FlowerBouquet {
     private List<Flower> flowers;
     private List<Accessory> accessories;
@@ -29,6 +31,11 @@ public class FlowerBouquet {
     public List<Flower> getFlowers() {
         return flowers;
     }
+
+    public List<Accessory> getAccessories() {
+        return accessories;
+    }
+
     public void describe() {
         System.out.println("Bouquet Contents:");
         for (Flower flower : flowers) {

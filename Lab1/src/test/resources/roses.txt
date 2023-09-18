@@ -1,0 +1,2 @@
+Red Rose,colors.Red,12.0,5,14
+Pink Tulip,colors.Pink,8.0,4,10

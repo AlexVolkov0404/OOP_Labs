@@ -1,0 +1,2 @@
+Gold Ribbon,2.0
+Silver Bow,1.5
