@@ -1,0 +1,2 @@
+Rose1,colors.RedColor,12.99,5,18,24
+Rose2,colors.PinkColor,14.99,4,20,20
