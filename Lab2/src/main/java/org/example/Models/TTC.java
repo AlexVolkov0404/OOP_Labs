@@ -6,7 +6,7 @@ import org.example.Models.Types.Range;
 import java.util.Objects;
 
 @Getter
-public class TTC {
+public class  TTC {
     public static final String FIRING_RANGE =    "FiringRange";
     public static final String SIGHTING_RANGE =  "SightingRange";
     public static final String MAGAZINE =        "Magazine";

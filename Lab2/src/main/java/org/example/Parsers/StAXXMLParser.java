@@ -15,7 +15,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StAXXMLParser extends XMLParser{
+public class  StAXXMLParser extends XMLParser{
     private Gun gun;
 
     @Override
